@@ -9,5 +9,10 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  console.log("hi")
   res.status(200).json({ name: 'John Doe' })
 }
+export const config = {
+  type: 'experimental-scheduled',
+  schedule: '0 */6 * * *',
+};
